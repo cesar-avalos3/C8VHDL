@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03/31/2017 03:22:54 AM
+-- Create Date: 03/31/2017 04:12:59 AM
 -- Design Name: 
--- Module Name: TYPES - Behavioral
+-- Module Name: CPU - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,8 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-package TYPES is
+entity CPU is
 --  Port ( );
-    Type opcode IS (O_MOV, O_OR, O_AND, O_XOR, O_ADD, O_SUB, O_SHIFT_R, O_SHIFT_L, O_GT, O_EQ, O_PLUSPLUS);
+end CPU;
 
-end TYPES;
+architecture Behavioral of CPU is
+
+begin
+
+
+end Behavioral;
