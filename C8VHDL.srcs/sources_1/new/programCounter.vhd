@@ -1,24 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04/07/2017 12:33:23 PM
--- Design Name: 
--- Module Name: programCounter - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_unsigned.all;
@@ -56,5 +35,5 @@ process(clk, reset) begin
     end if;
 end process;
     addressBus <= currentRegister when enable = '1' else "ZZZZZZZZZZZZZZZZ";
-    
+ 
 end Behavioral;

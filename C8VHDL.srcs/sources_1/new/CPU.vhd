@@ -1,30 +1,10 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 03/31/2017 04:12:59 AM
--- Design Name: 
--- Module Name: CPU - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.types.all;
 
 entity CPU is
    Port( clk, reset: in std_logic;
+         -- inputs for debugging purposes only
          inputs: in std_logic_vector(7 downto 0);
          registers_cpu: in registers;
          output: out std_logic_vector(3 downto 0));
@@ -40,22 +20,46 @@ component ALU is
        output: out std_logic_vector(3 downto 0));
 end component;
 
+component RAM is
+    Port( address: in  std_logic_vector(15 downto 0);
+          enable : in  std_logic;
+          dataOut: out std_logic_vector(15 downto 0));
+end component;
+
+component programCounter is
+    Port ( clk, enable, load, increment, reset: IN STD_LOGIC;
+           dataBus   : IN  STD_LOGIC_VECTOR(15 DOWNTO 0);
+           addressBus: OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+           );
+end component;
+
+-- ALU Signals
 signal opcode_sig: OPCODE;
 signal input_one,input_two, result_ALU: std_logic_vector(3 downto 0);
 signal carry_flag, shift_flag, borrow_flag: std_logic;
+
+-- RAM signals
+signal address_ram, dataIn_ram: std_logic_vector(15 downto 0);
+signal enable_ram: std_logic;
+
+-- PC signals
+signal enable_pc, load_pc, increment_pc, reset_pc: std_logic;
+signal dataBus_pc, addressBus_pc: std_logic_vector(15 downto 0);
+
 begin
 
-oop: ALU port map(opcode_in => opcode_sig, input_one => input_one, input_two => input_two, 
+ALU_f: ALU port map(opcode_in => opcode_sig, input_one => input_one, input_two => input_two, 
                   carry_flag => carry_flag, shift_flag => shift_flag, borrow_flag => borrow_flag, 
                   output => result_alu);
+
+RAM_f: RAM port map(address => address_ram, dataOut => dataIn_ram, enable => enable_ram);
+
+PC_f:  programCounter port map(enable => enable_pc, load => load_pc, increment => increment_pc, clk => clk,
+                               reset => reset_pc, dataBus => dataBus_pc, addressBus => addressBus_pc);
 
 process(clk, reset) begin
     if(rising_edge(clk)) then
         --fetch instruction
-        --debug try to see what happens
-        input_one <= inputs(3 downto 0);
-        input_two <= inputs(7 downto 4);
-        opcode_sig <= O_ADD;
     elsif(falling_edge(clk)) then
         opcode_sig <= O_NONE;
     end if;
