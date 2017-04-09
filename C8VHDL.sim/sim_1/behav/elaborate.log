@@ -1,6 +1,6 @@
 Vivado Simulator 2016.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 437cfd194a384f10a8ffc7369e4869a2 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot CPU_SIM_behav xil_defaultlib.CPU_SIM -log elaborate.log 
+Running: D:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 437cfd194a384f10a8ffc7369e4869a2 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot RAM_SIM_behav xil_defaultlib.RAM_SIM -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,9 +10,10 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package xil_defaultlib.types
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.CPU [cpu_default]
-Compiling architecture behavioral of entity xil_defaultlib.cpu_sim
-Built simulation snapshot CPU_SIM_behav
+Compiling package xil_defaultlib.types
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.utilityfunctions
+Compiling architecture behavioral of entity xil_defaultlib.RAM [ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.ram_sim
+Built simulation snapshot RAM_SIM_behav

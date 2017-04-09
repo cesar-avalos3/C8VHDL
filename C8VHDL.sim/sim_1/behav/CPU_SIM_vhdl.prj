@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/imports/new/TYPES.vhd"
-vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/imports/new/ALU.vhd"
-vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/new/CPU.vhd"
-vhdl xil_defaultlib  "../../../C8VHDL.srcs/sim_1/new/CPU_SIM.vhd"
-
-# Do not sort compile order
-nosort
