@@ -31,6 +31,7 @@ impure function readFileToRAM(Filename: STRING) return RAM_ARRAY is
    return Output;
 end function;
 
+-- findOPCODE decodes the instruction set.
 impure function findOPCODE(instruction: STD_LOGIC_VECTOR(15 DOWNTO 0)) return OPCODE is
     
     variable Output : OPCODE;
@@ -107,6 +108,8 @@ impure function findOPCODE(instruction: STD_LOGIC_VECTOR(15 DOWNTO 0)) return OP
             Output := O_LDI;
         when "1111XXXX01100110" =>
             Output := O_LDVXI;
+        when others =>
+            Output := O_NONE;
     end case;
     
     

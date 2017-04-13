@@ -21,15 +21,18 @@ end RAM;
 
 architecture Behavioral of RAM is
 
+-- At compile time this will write onto the ram
+-- Temp solution, will find something better
 signal ramData: RAM_ARRAY := readFileToRAM("test.hex");
 
 begin
     
 process (r_w, reset) begin
     if(reset = '1') then
-        for i in 0 to RAM_ARRAY'length loop
-            ramData(i) <= x"0000";
-        end loop;
+        -- ramData <= readFileToRAM("text.hex");
+        -- for i in 0 to (RAM_ARRAY'length - 1) loop
+        --    ramData(i) <= x"0000";
+        -- end loop;
     elsif(r_w'event and r_w = '0') then
         ramData(to_integer(unsigned(address))) <= dataIn;
     end if;

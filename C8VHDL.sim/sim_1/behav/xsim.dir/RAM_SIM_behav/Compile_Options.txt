@@ -1,1 +1,0 @@
--wto "437cfd194a384f10a8ffc7369e4869a2" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "RAM_SIM_behav" "xil_defaultlib.RAM_SIM" -log "elaborate.log" 

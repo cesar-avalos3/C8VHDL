@@ -5,9 +5,9 @@ use IEEE.std_logic_unsigned.all;
 -- Using unsigned as the memory addresses are going to be unsigned.
 
 entity programCounter is
-    Port ( clk, enable, load, increment, reset: IN STD_LOGIC;
-           dataBus   : IN  STD_LOGIC_VECTOR(15 DOWNTO 0);
-           addressBus: OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    Port ( clk,  enable, load, increment, reset: IN STD_LOGIC;
+           dataBus   : IN  STD_LOGIC_VECTOR(11 DOWNTO 0);
+           addressBus: OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
            );
 end programCounter;
 
@@ -18,22 +18,23 @@ end programCounter;
 
 architecture Behavioral of programCounter is
 
-signal currentRegister: STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal currentRegister: STD_LOGIC_VECTOR(11 DOWNTO 0);
 
 begin
 process(clk, reset) begin
 
     if(reset = '1') then
-        currentRegister <= x"200";        
+        currentRegister <= "000000000000";       
     elsif(rising_edge(clk)) then
         --Should increase have priority?
         if(increment = '1') then
-            currentRegister <= currentRegister + x"0001";
+            currentRegister <= currentRegister + x"001";
         elsif(load = '1') then
             currentRegister <= dataBus;
         end if;
     end if;
 end process;
-    addressBus <= currentRegister when enable = '1' else "ZZZZZZZZZZZZZZZZ";
+
+    addressBus <= currentRegister when enable = '1' else "ZZZZZZZZZZZZ";
  
 end Behavioral;

@@ -2,7 +2,11 @@
 2016.4
 Jan 23 2017
 19:37:30
-C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sim_1/new/RAM_SIM.vhd,1491779922,vhdl,,,,ram_sim,,,,,,,,
-C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/imports/new/TYPES.vhd,1491778451,vhdl,C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/RAM.vhd;C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/utilityFunctions.vhd,,,types,,,,,,,,
-C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/RAM.vhd,1491779817,vhdl,,,,ram,,,,,,,,
-C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/utilityFunctions.vhd,1491779273,vhdl,C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/RAM.vhd,,,utilityfunctions,,,,,,,,
+C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sim_1/new/CPU_SIM.vhd,1492118136,vhdl,,,,cpu_sim,,,,,,,,
+C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/imports/new/ALU.vhd,1492119528,vhdl,,,,alu,,,,,,,,
+C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/imports/new/TYPES.vhd,1492098488,vhdl,C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sim_1/new/CPU_SIM.vhd;C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/imports/new/ALU.vhd;C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/CPU.vhd;C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/INSTRUCTION_DECODER.vhd;C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/RAM.vhd;C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/utilityFunctions.vhd,,,types,,,,,,,,
+C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/CPU.vhd,1492122801,vhdl,,,,cpu,,,,,,,,
+C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/INSTRUCTION_DECODER.vhd,1492125274,vhdl,,,,instruction_decoder,,,,,,,,
+C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/RAM.vhd,1492116846,vhdl,,,,ram,,,,,,,,
+C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/programCounter.vhd,1492116685,vhdl,,,,programcounter,,,,,,,,
+C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/utilityFunctions.vhd,1492117719,vhdl,C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/CPU.vhd;C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/RAM.vhd,,,utilityfunctions,,,,,,,,
