@@ -3,11 +3,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 use work.types.all;
 
 entity CPU is
-   Port( clk, reset: in std_logic;
+   Port( clk, reset: in STD_LOGIC;
          -- inputs for debugging purposes only
-         inputs: in std_logic_vector(7 downto 0);
-         registers_cpu: in registers;
-         output: out std_logic_vector(3 downto 0));
+         inputs: in STD_LOGIC_VECTOR(7 downto 0);
+         output: out STD_LOGIC_VECTOR(3 downto 0));
 end CPU;
 
 architecture Behavioral of CPU is
@@ -15,9 +14,9 @@ architecture Behavioral of CPU is
 component ALU is
   Port (
        opcode_in: in OPCODE;
-       input_one, input_two: in std_logic_vector(3 downto 0);
+       input_one, input_two: in STD_LOGIC_VECTOR(3 downto 0);
        carry_flag, shift_flag, borrow_flag: out std_logic;
-       output: out std_logic_vector(3 downto 0));
+       output: out STD_LOGIC_VECTOR(3 downto 0));
 end component;
 
 component programCounter is
@@ -29,12 +28,16 @@ end component;
 
 -- ALU Signals
 signal opcode_sig: OPCODE;
-signal input_one,input_two, result_ALU: std_logic_vector(3 downto 0);
-signal carry_flag, shift_flag, borrow_flag: std_logic;
+signal input_one,input_two, result_ALU: STD_LOGIC_VECTOR(3 downto 0);
+signal carry_flag, shift_flag, borrow_flag: STD_LOGIC;
 
 -- PC signals
-signal enable_pc, load_pc, increment_pc, reset_pc: std_logic;
-signal dataBus_pc, addressBus_pc: std_logic_vector(15 downto 0);
+signal enable_pc, load_pc, increment_pc, reset_pc: STD_LOGIC;
+signal dataBus_pc, addressBus_pc: STD_LOGIC_VECTOR(15 downto 0);
+
+-- CPU signals
+signal registers_cpu : registers;
+signal stack_cpu: stack;
 
 begin
 

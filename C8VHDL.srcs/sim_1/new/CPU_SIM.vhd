@@ -41,17 +41,15 @@ architecture Behavioral of CPU_SIM is
 component CPU is
     port(clk, reset: in std_logic;
          inputs: in std_logic_vector(7 downto 0);
-         registers_cpu: in registers;
          output: out std_logic_vector(3 downto 0));
 end component;
 
 signal clk, reset: std_logic := '0';
-signal registers_cpu: registers;
 signal inputs: std_logic_vector(7 downto 0) := "00000000";
 signal output: std_logic_vector(3 downto 0) := "0000";
 signal a: std_logic_vector(7 downto 0);
 begin
-    mappink: CPU port map(clk => clk, reset => reset, registers_cpu => registers_cpu, inputs => inputs,output => output);
+    CPU_Instance: CPU port map(clk => clk, reset => reset, inputs => inputs,output => output);
  
  process begin
         wait for 20 ns;

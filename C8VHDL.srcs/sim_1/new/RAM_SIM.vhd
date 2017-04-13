@@ -23,7 +23,7 @@ begin
 
     RAM_SIM: RAM port map(address => address, enable => enable, dataOut => dataOut);
     process begin
-    
+        
         address <= "001000000000";
         enable <= '1';
         wait for 20 ns;
