@@ -11,13 +11,13 @@ entity INSTRUCTION_DECODER is
           opcode_out    : out OPCODE);
 end INSTRUCTION_DECODER;
 
+
 architecture Behavioral of INSTRUCTION_DECODER is
 
 signal opcode_out_sig: OPCODE;
 
 begin
-    process (clk) begin
-    if(rising_edge(clk)) then
+    process (instruction_in) begin
                    if(instruction_in =  "0000000011100000" ) then 
                     opcode_out_sig <= O_CLS;
                 elsif(instruction_in =  "0000000011101110" ) then 
@@ -97,7 +97,6 @@ begin
                 else
                     opcode_out_sig <= O_NONE;
                 end if;
-        end if;
     end process;
  
 opcode_out <= opcode_out_sig;
