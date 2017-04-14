@@ -66,7 +66,7 @@ begin
         else
             reset <= '0';
         end if;
-        wait for 20 ns;
+        wait for 16.67 ms;
         clk <= not(clk);
  end process;
 

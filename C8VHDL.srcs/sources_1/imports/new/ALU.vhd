@@ -21,10 +21,9 @@ signal c: STD_LOGIC := '0';
 signal q: STD_LOGIC_VECTOR(3 downto 0) := "0000";
 -- opcodes O_MOV, O_OR, O_AND, O_XOR, O_ADD, O_SUB, O_SHIFT_R, O_SHIFT_L, O_GT, O_EQ, O_PLUSPLUS
 begin
-    process(clk) 
+    process(input_one, input_two, opcode_in)
     begin
         c <= '0';
-        if(rising_edge(clk)) then
         case opcode_in is
             when O_OR =>
                 q <= input_one OR input_two;
@@ -65,7 +64,6 @@ begin
             when others =>
                 q <= "0000";
         end case;
-       end if;
     end process;
     
     output <= q;

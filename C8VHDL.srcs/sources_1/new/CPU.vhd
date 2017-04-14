@@ -84,7 +84,7 @@ RAM_f: RAM port map(address => address_ram, enable => enable_ram, reset => reset
 
 DECODER_f: INSTRUCTION_DECODER port map(clk => clk, instruction_in => dataOut_ram, opcode_out => opcode_sig);
 
-process(clk, reset) begin    
+process(clk, reset) begin
     if(reset = '1') then
         --Something here
     elsif(rising_edge(clk)) then
@@ -96,15 +96,12 @@ process(clk, reset) begin
         enable_pc <= '1';
         load_pc <= '1';
         r_w_ram <= '1';
-        address_ram <= addressBus_pc;
-    elsif(falling_edge(clk)) then
-        load_pc <= '0';
-        increment_pc <= '1';
     end if;
 end process;
 
-input_one <= dataOut_ram(3 DOWNTO 0);
-input_two <= dataOut_ram(7 DOWNTO 4);
+address_ram <= addressBus_pc;
+input_one <= dataOut_ram(7 DOWNTO 4);
+input_two <= dataOut_ram(11 DOWNTO 8);    
 instruction_debug <= dataOut_ram;
 programCounter_debug <= addressBus_pc;
 output <= result_alu;

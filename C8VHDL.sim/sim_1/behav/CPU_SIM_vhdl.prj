@@ -1,10 +1,10 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/imports/new/TYPES.vhd"
 vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/new/utilityFunctions.vhd"
+vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/imports/new/ALU.vhd"
 vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/new/INSTRUCTION_DECODER.vhd"
 vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/new/RAM.vhd"
 vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/new/programCounter.vhd"
-vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/imports/new/ALU.vhd"
 vhdl xil_defaultlib  "../../../C8VHDL.srcs/sources_1/new/CPU.vhd"
 vhdl xil_defaultlib  "../../../C8VHDL.srcs/sim_1/new/CPU_SIM.vhd"
 
