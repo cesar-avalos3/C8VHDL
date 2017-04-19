@@ -1,5 +1,7 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/imports/new/TYPES.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/utilityFunctions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/REGISTERS_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity REGISTERS_16
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/imports/new/ALU.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity ALU
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cesar/Documents/School/EECS 443/Projects/C8VHDL/C8VHDL.srcs/sources_1/new/INSTRUCTION_DECODER.vhd" into library xil_defaultlib
