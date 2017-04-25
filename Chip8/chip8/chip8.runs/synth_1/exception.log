@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file H:\EECS_443_project\C8VHDL\Chip8\chip8\chip8.runs\synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied
