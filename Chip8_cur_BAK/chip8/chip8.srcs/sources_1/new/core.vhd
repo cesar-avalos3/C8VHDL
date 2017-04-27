@@ -19,6 +19,7 @@ entity core is
 end core;
 
 architecture Behavioral of core is
+    
     constant DT_ADDRESS  : std_logic_vector(11 downto 0):= "000000000000";
     constant ST_ADDRESS  : std_logic_vector(11 downto 0):= "000000000001";
     
@@ -37,24 +38,35 @@ architecture Behavioral of core is
                     CLEAR_A, getSprite, grab_graphicsA, grab_graphicsB, 
                     drawSprite, drawSpriteA, drawSpriteB, getDT, 
                     BCD_hundreds, BCD_tens, BCD_ones, pull_reg );
+
     signal current_state : state;
     signal tmp_err_code : STD_LOGIC_VECTOR( 2 downto 0 );
     
+    -- mem_ret_state acts like a stack pointer of sorts,
+    -- once the 
     signal mem_ret_state : state;
     signal tmp_mem_write : STD_LOGIC;
     signal mem_ret_data : STD_LOGIC_VECTOR (7 downto 0);
     
+    -- Program Counter
     signal PC : STD_LOGIC_VECTOR ( 11 downto 0 );
-    signal instruction_high : STD_LOGIC_VECTOR ( 7 downto 0 );
     
+    signal instruction_high : STD_LOGIC_VECTOR ( 7 downto 0 );
+
+    -- Address
     signal addr : STD_LOGIC_VECTOR ( 11 downto 0 );
+    
+    -- The functions arguments are denoted by n,x,y, and kk
+    -- In the technical manuals
     signal n, x, y : STD_LOGIC_VECTOR ( 3 downto 0 );
     signal kk : STD_LOGIC_VECTOR ( 7 downto 0 );
     
+    -- Stack Pointer
     signal SP : STD_LOGIC_VECTOR ( 7 downto 0 );
     type STACK is array( 15 downto 0 ) of STD_LOGIC_VECTOR (15 downto 0);
     signal cpu_STACK : STACK;
     
+    -- Registers
     type REG is array( 15 downto 0 ) of STD_LOGIC_VECTOR (7 downto 0);
     signal cpu_REG : REG;
     
@@ -102,6 +114,7 @@ begin
         variable key_num : STD_LOGIC_VECTOR ( 3 downto 0 );
         variable key_mask : STD_LOGIC_VECTOR ( 15 downto 0 );
         variable math_buf : STD_LOGIC_VECTOR ( 8 downto 0 );
+        variable operand1, operand2: STD_LOGIC_VECTOR(7 DOWNTO 0);
     begin
         if( reset = '1' ) then
             current_state <= initA;
@@ -112,32 +125,30 @@ begin
             mem_hold <= '0';
             tmp_err_code <= "000";
             cpu_state <= x"01";
+            -- Not so sure about this right here
             if ( rising_edge( clk ) ) then
                 RAND <= ( RAND(0) xor RAND(2) xor RAND(3) xor RAND(5) ) & RAND( 15 downto 1);
             end if;
         elsif ( rising_edge( clk ) ) then
             RAND <= ( RAND(0) xor RAND(2) xor RAND(3) xor RAND(5) ) & RAND( 15 downto 1);
-            current_state <= current_state;
+            -- This is not doing anything
+            -- It's like writing 1 = 1
+            -- current_state <= current_state;
             case current_state is
                 when error =>
                     cpu_state <= x"00";
                 when initA =>
                     cpu_state <= x"02";           
                     PC <= x"200";
-                    I <= "000000000000";
-                    SP <= "00000000";
-                                            
-                    cpu_REG( 0) <= "00000000";  cpu_REG( 8) <= "00000000";
-                    cpu_REG( 1) <= "00000000";  cpu_REG( 9) <= "00000000";
-                    cpu_REG( 2) <= "00000000";  cpu_REG(10) <= "00000000";
-                    cpu_REG( 3) <= "00000000";  cpu_REG(11) <= "00000000";
-                    cpu_REG( 4) <= "00000000";  cpu_REG(12) <= "00000000";
-                    cpu_REG( 5) <= "00000000";  cpu_REG(13) <= "00000000";
-                    cpu_REG( 6) <= "00000000";  cpu_REG(14) <= "00000000";
-                    cpu_REG( 7) <= "00000000";  cpu_REG(15) <= "00000000";
-                                            
+                    I <= (others => '0');
+                    SP <= (others => '0');
+                    
+                    -- Neat short-hand form to reset arrays
+                    cpu_REG <= (others => (others => '0'));                                            
+                    
                     key_counter <= "0000";
-                                            
+                    
+                    -- Hardcoded hexadecimal fonts
                     hex_digits( 0) <= "000000000010";  hex_digits( 8) <= "000000101010";
                     hex_digits( 1) <= "000000000111";  hex_digits( 9) <= "000000101111";
                     hex_digits( 2) <= "000000001100";  hex_digits(10) <= "000000110100";
@@ -147,7 +158,10 @@ begin
                     hex_digits( 6) <= "000000100000";  hex_digits(14) <= "000001001000";
                     hex_digits( 7) <= "000000100101";  hex_digits(15) <= "000001001101";
                     
-                    current_state <= fetchA;                    
+                    current_state <= fetchA;
+
+                -- FetchA
+                -- The high instruction bits are fetched.                  
                 when fetchA =>
                     cpu_state <= x"03";
                     memAddress <= PC;
@@ -156,6 +170,8 @@ begin
                     mem_hold <= '0';
                     mem_ret_state <= fetchB;
                     current_state <= memA;
+                -- FetchB
+                -- The low instruction bits are fetched
                 when fetchB =>
                     cpu_state <= x"04";
                     instruction_high <= mem_ret_data;
@@ -163,105 +179,142 @@ begin
                     PC <= PC + x"001";
                     mem_ret_state <= Decode;
                     current_state <= memA;
+                -- memA
+                -- This state exists as a buffer of sorts
+                -- to make sure the memory from fetchA is indeed
+                -- loaded. 
                 when memA =>
                     cpu_state <= x"05";
                     if ( mem_done = '0' ) then
                         mem_valid <= '1';
                         current_state <= memB;
                     end if;
+                    -- What's the cpu state if cpu_state != x"05"
+                    -- Does it keep reading?
+                -- memB
+                -- Same as above but for the fetchB state.
                 when memB =>
                     cpu_state <= x"06";
                     if( mem_done = '1' ) then
                         if ( tmp_mem_write = '0' ) then
                             mem_ret_data <= memRead;
                         end if;
-                        
                         mem_valid <= '0';
                         current_state <= mem_ret_state;
                     end if;
+                -- Decode
+                -- Starts by concatenating the instructions fetched in the state
+                -- preceding it. It then decodes the instructions and assigns the
+                -- cpu state pertaining to each opcode.
                 when Decode =>
                     cpu_state <= x"07";
                     instruction := instruction_high & mem_ret_data;
                     case instruction( 15 downto 12 ) is
                         when "0000" =>
+                            -- x"00E0" | CLEAR
                             if ( instruction = "0000000011100000" ) then
                                 current_state <= O_CLEAR;
+                            -- x"00EE" | RETURN
                             elsif ( instruction = "0000000011101110" ) then
                                 current_state <= O_RET;
+                            -- x"00EF" | NOP
                             else
                                 current_state <= O_NOP;
                             end if;
+                            -- x"1nnn" | JUMP
                         when "0001" =>
                             addr <= instruction( 11 downto 0 );
                             current_state <= O_JUMP;
+                            -- x"2nnn" | CALL
                         when "0010" =>
                             addr <= instruction( 11 downto 0 );
                             current_state <= O_CALL;
+                            -- x"3xkk" | SKIP IF EQUAL (REG, BYTE)
                         when "0011" =>
                             x <= instruction( 11 downto 8 );
                             kk <= instruction( 7 downto 0 );
                             current_state <= O_SNI_X_EQ_KK;
+                            -- x"4xkk" | SKIP IF UNEQUAL (REG, BYTE)
                         when "0100" =>
                             x <= instruction( 11 downto 8 );
                             kk <= instruction( 7 downto 0 );
                             current_state <= O_SNI_X_NE_KK;
+                            -- x"5xy0" | SKIP IF EQUAL (REG, REG)
                         when "0101" =>
                             x <= instruction( 11 downto 8 );
                             y <= instruction( 7 downto 4 );
                             current_state <= O_SNI_X_EQ_Y;
+                            -- x"6xkk" | LOAD (REG, BYTE)
                         when "0110" =>
                             x <= instruction( 11 downto 8 );
                             kk <= instruction( 7 downto 0 );
                             current_state <= O_LD_X_KK;
+                            -- x"7xkk" | ADD (REG, BYTE)
                         when "0111" =>
                             x <= instruction( 11 downto 8 );
                             kk <= instruction( 7 downto 0 );
                             current_state <= O_ADD_X_KK;
+                            -- x"8---" | INSTRUCTIONS
                         when "1000" =>
                             x <= instruction( 11 downto 8 );
                             y <= instruction( 7 downto 4 );
                             case instruction( 3 downto 0 ) is
+                                -- x"8xy0" | LOAD (REG, REG)
                                 when "0000" =>
                                     current_state <= O_LD_X_Y;
+                                -- x"8xy1" | OR (REG, REG)
                                 when "0001" =>
                                     current_state <= O_OR_X_Y;
+                                -- x"8xy2" | AND (REG, REG)
                                 when "0010" =>
                                     current_state <= O_AND_X_Y;
+                                -- x"8xy3" | XOR (REG, REG)
                                 when "0011" =>
                                     current_state <= O_XOR_X_Y;
+                                -- x"8xy4" | ADD (REG, REG)
                                 when "0100" =>
                                     current_state <= O_ADC_X_Y;
+                                -- x"8xy5" | SUBTRACT (REG, REG)
                                 when "0101" =>
                                     current_state <= O_SUB_X_Y;
+                                -- x"8xy6" | SHIFT RIGHT (REG, REG)
                                 when "0110" =>
                                     current_state <= O_SHR_X_Y;
+                                -- x"8xy7" | SUBTRACT FLIP (REG, REG)                                    
                                 when "0111" =>
                                     current_state <= O_SUBN_X_Y;
+                                -- x"8xyE" | SHIFT LEFT (REG, REG)                                    
                                 when "1110" =>
                                     current_state <= O_SHL_X_Y;
                                 when others =>
                                     tmp_err_code <= INVALID_OP;
                                     current_state <= error;
                             end case;
+                        -- x"9xy0" | SKIP IF NOT EQUAL (REG, REG)                               
                         when "1001" =>
                             x <= instruction( 11 downto 8 );
                             y <= instruction( 7 downto 4 );
                             current_state <= O_SNI_X_NE_Y;
+                        -- x"Annn" | LOAD INDEX (REG, CONST)                                    
                         when "1010" =>
                             addr <= instruction( 11 downto 0 );
                             current_state <= O_LD_I_ADDR;
+                        -- x"Bnnn" | JUMP (ADDRESS, REG)                                    
                         when "1011" =>
                             addr <= instruction( 11 downto 0 );
                             current_state <= O_JMP_V0_ADDR;
+                        -- x"Cxkk" | RANDOM (REG, CONST)                                    
                         when "1100" =>
                             x <= instruction( 11 downto 8 );
                             kk <= instruction( 7 downto 0 );
                             current_state <= O_RND;
+                        -- x"Dxyn" | DRAW (REG, REG, SPRITE ADDRESS)                                    
                         when "1101" =>
                             x <= instruction( 11 downto 8 );
                             y <= instruction( 7 downto 4 );
                             n <= instruction( 3 downto 0 );
                             current_state <= O_DRW;
+                        -- x"Ex9E" | SKP (REG) and NOT SKIP (REG)                                
                         when "1110" =>
                             x <= instruction( 11 downto 8 );
                             if ( instruction( 7 downto 0 ) = "10011110" ) then
@@ -272,25 +325,35 @@ begin
                                 tmp_err_code <= INVALID_OP;
                                 current_state <= error;
                             end if;
+                        -- x"F" | Instructions                                    
                         when "1111" =>
                             x <= instruction( 11 downto 8 );
                             case instruction( 7 downto 0 ) is
+                                -- x"Fx07" | LOAD (DELAY TIMER -> REG)                                    
                                 when x"07" =>
                                     current_state <= O_LD_X_DT;
+                                -- x"Fx0A" | LOAD (REG, KEY)                                    
                                 when x"0A" =>
                                     current_state <= O_LD_X_KEY;
+                                -- x"Fx15" | LOAD (REG -> DELAY TIMER)                                   
                                 when x"15" =>
                                     current_state <= O_LD_DT_X;
+                                -- x"Fx18" | LOAD (SOUND TIMER -> REG)                                                                       
                                 when x"18" =>
                                     current_state <= O_LD_ST_X;
+                                -- x"Fx1E" | ADD (I + REG -> I)                                   
                                 when x"1E" =>
                                     current_state <= O_ADD_I_X;
+                                -- x"Fx29" | LOAD (I -> REG ADDRESS SPRITE HEX FONT)                                   
                                 when x"29" =>
                                     current_state <= O_LD_F_X;
+                                -- x"Fx33" | BCD                                   
                                 when x"33" =>
                                     current_state <= O_LD_B_X;
+                                -- x"Fx55" | LOAD (V0&...&VX ->  MEMORY ADDRESS I)                                                                       
                                 when x"55" =>
                                     current_state <= O_LD_I_X;
+                                -- x"Fx65" | READ (MEMORY ADDRESS I -> V0&...&VX)                                   
                                 when x"65" =>
                                     current_state <= O_LD_X_I;
                                 when others =>
@@ -358,19 +421,16 @@ begin
                     if ( cpu_REG( to_integer( unsigned ( x ) ) ) = kk ) then
                         PC <= PC + "000000000010";
                     end if;
-                    
                     current_state <= fetchA;
                 when O_SNI_X_NE_KK =>
                     cpu_state <= x"0F";
                     if ( cpu_REG( to_integer( unsigned ( x ) ) ) /= kk ) then
                         PC <= PC + "000000000010";
                     end if;
-                    
                     current_state <= fetchA;
                 when O_SNI_X_EQ_Y =>
                      cpu_state <= x"10";
-                     if ( cpu_REG( to_integer( unsigned ( x ) ) ) 
-                          = 
+                     if ( cpu_REG( to_integer( unsigned ( x ) ) ) = 
                           cpu_REG( to_integer( unsigned ( y ) ) ) ) then
                         PC <= PC + "000000000010";
                      end if;
@@ -390,26 +450,49 @@ begin
                     cpu_REG(to_integer(unsigned( x ))) <=
                             cpu_REG(to_integer(unsigned( y )));
                     current_state <= fetchA;
+                -- CHIP_8 OR Operation is bitwise
                 when O_OR_X_Y =>
                     cpu_state <= x"14";
+                    operand1 := cpu_REG(to_integer(unsigned( x )));
+                    operand2 := cpu_REG(to_integer(unsigned( y )));
                     cpu_REG(to_integer(unsigned( x ))) <=
-                            cpu_REG(to_integer(unsigned( x )))
-                            or
-                            cpu_REG(to_integer(unsigned( y )));
+                                                          ( operand1(7) OR operand2(7) ) & 
+                                                          ( operand1(6) OR operand2(6) ) &
+                                                          ( operand1(5) OR operand2(5) ) &
+                                                          ( operand1(4) OR operand2(4) ) &
+                                                          ( operand1(3) OR operand2(3) ) &
+                                                          ( operand1(2) OR operand2(2) ) &
+                                                          ( operand1(1) OR operand2(1) ) &
+                                                          ( operand1(0) OR operand2(0) );
+
                     current_state <= fetchA;
+                -- CHIP_8 OR Operation is bitwise
                 when O_AND_X_Y =>
                     cpu_state <= x"15";
-                    cpu_REG(to_integer(unsigned( x ))) <=
-                            cpu_REG(to_integer(unsigned( x )))
-                            and
-                            cpu_REG(to_integer(unsigned( y )));
+                    operand1 := cpu_REG(to_integer(unsigned( x )));
+                    operand2 := cpu_REG(to_integer(unsigned( y )));
+                    cpu_REG(to_integer(unsigned( x ))) <= ( operand1(7) AND operand2(7) ) & 
+                                                          ( operand1(6) AND operand2(6) ) &
+                                                          ( operand1(5) AND operand2(5) ) &
+                                                          ( operand1(4) AND operand2(4) ) &
+                                                          ( operand1(3) AND operand2(3) ) &
+                                                          ( operand1(2) AND operand2(2) ) &
+                                                          ( operand1(1) AND operand2(1) ) &
+                                                          ( operand1(0) AND operand2(0) );
+
                     current_state <= fetchA;
                 when O_XOR_X_Y =>
                     cpu_state <= x"16";
-                    cpu_REG(to_integer(unsigned( x ))) <=
-                           cpu_REG(to_integer(unsigned( x )))
-                           xor
-                           cpu_REG(to_integer(unsigned( y )));
+                    operand1 := cpu_REG(to_integer(unsigned( x )));
+                    operand2 := cpu_REG(to_integer(unsigned( y )));
+                    cpu_REG(to_integer(unsigned( x ))) <= ( operand1(7) XOR operand2(7) ) & 
+                                                          ( operand1(6) XOR operand2(6) ) &
+                                                          ( operand1(5) XOR operand2(5) ) &
+                                                          ( operand1(4) XOR operand2(4) ) &
+                                                          ( operand1(3) XOR operand2(3) ) &
+                                                          ( operand1(2) XOR operand2(2) ) &
+                                                          ( operand1(1) XOR operand2(1) ) &
+                                                          ( operand1(0) XOR operand2(0) );
                     current_state <= fetchA;
                 when O_ADC_X_Y =>
                     cpu_state <= x"17";
@@ -750,6 +833,8 @@ begin
                     memAddress <= multi_address;
                     multi_address <= multi_address + "000000000001";
                     reg_copy_num <= reg_copy_num + "0001";
+                    
+                    -- Is this conditional checking before or after increasing by 1?
                     if ( reg_copy_num = x ) then
                         current_state <= fetchA;
                     else
