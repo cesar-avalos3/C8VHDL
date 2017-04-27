@@ -450,49 +450,27 @@ begin
                     cpu_REG(to_integer(unsigned( x ))) <=
                             cpu_REG(to_integer(unsigned( y )));
                     current_state <= fetchA;
-                -- CHIP_8 OR Operation is bitwise
+                -- CHIP_8 OR Operation
                 when O_OR_X_Y =>
                     cpu_state <= x"14";
-                    operand1 := cpu_REG(to_integer(unsigned( x )));
-                    operand2 := cpu_REG(to_integer(unsigned( y )));
                     cpu_REG(to_integer(unsigned( x ))) <=
-                                                          ( operand1(7) OR operand2(7) ) & 
-                                                          ( operand1(6) OR operand2(6) ) &
-                                                          ( operand1(5) OR operand2(5) ) &
-                                                          ( operand1(4) OR operand2(4) ) &
-                                                          ( operand1(3) OR operand2(3) ) &
-                                                          ( operand1(2) OR operand2(2) ) &
-                                                          ( operand1(1) OR operand2(1) ) &
-                                                          ( operand1(0) OR operand2(0) );
-
+                            cpu_REG(to_integer(unsigned( x )))
+                            or
+                            cpu_REG(to_integer(unsigned( y )));
                     current_state <= fetchA;
-                -- CHIP_8 OR Operation is bitwise
                 when O_AND_X_Y =>
                     cpu_state <= x"15";
-                    operand1 := cpu_REG(to_integer(unsigned( x )));
-                    operand2 := cpu_REG(to_integer(unsigned( y )));
-                    cpu_REG(to_integer(unsigned( x ))) <= ( operand1(7) AND operand2(7) ) & 
-                                                          ( operand1(6) AND operand2(6) ) &
-                                                          ( operand1(5) AND operand2(5) ) &
-                                                          ( operand1(4) AND operand2(4) ) &
-                                                          ( operand1(3) AND operand2(3) ) &
-                                                          ( operand1(2) AND operand2(2) ) &
-                                                          ( operand1(1) AND operand2(1) ) &
-                                                          ( operand1(0) AND operand2(0) );
-
+                    cpu_REG(to_integer(unsigned( x ))) <=
+                            cpu_REG(to_integer(unsigned( x )))
+                            and
+                            cpu_REG(to_integer(unsigned( y )));
                     current_state <= fetchA;
                 when O_XOR_X_Y =>
                     cpu_state <= x"16";
-                    operand1 := cpu_REG(to_integer(unsigned( x )));
-                    operand2 := cpu_REG(to_integer(unsigned( y )));
-                    cpu_REG(to_integer(unsigned( x ))) <= ( operand1(7) XOR operand2(7) ) & 
-                                                          ( operand1(6) XOR operand2(6) ) &
-                                                          ( operand1(5) XOR operand2(5) ) &
-                                                          ( operand1(4) XOR operand2(4) ) &
-                                                          ( operand1(3) XOR operand2(3) ) &
-                                                          ( operand1(2) XOR operand2(2) ) &
-                                                          ( operand1(1) XOR operand2(1) ) &
-                                                          ( operand1(0) XOR operand2(0) );
+                    cpu_REG(to_integer(unsigned( x ))) <=
+                           cpu_REG(to_integer(unsigned( x )))
+                           xor
+                           cpu_REG(to_integer(unsigned( y )));
                     current_state <= fetchA;
                 when O_ADC_X_Y =>
                     cpu_state <= x"17";
