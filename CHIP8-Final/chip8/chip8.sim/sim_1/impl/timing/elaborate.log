@@ -1,0 +1,76 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 54fc8cd302594056840467f8f007c0c8 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot chip_8_TB_A_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.chip_8_TB_A xil_defaultlib.glbl -log elaborate.log -v 1 
+Using 2 slave threads.
+INFO: [XSIM 43-3427] Library Mapping: Sourcing library mapping file "C:\Xilinx\Vivado\2016.2\data/xsim/xsim.ini".
+INFO: [VRFC 10-233] The vhdl library search path for library "std" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/std"
+INFO: [VRFC 10-232] The veri library search path for library "std" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/std"
+INFO: [VRFC 10-233] The vhdl library search path for library "ieee" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/ieee"
+INFO: [VRFC 10-232] The veri library search path for library "ieee" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/ieee"
+INFO: [VRFC 10-233] The vhdl library search path for library "ieee_proposed" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/ieee_proposed"
+INFO: [VRFC 10-232] The veri library search path for library "ieee_proposed" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/ieee_proposed"
+INFO: [VRFC 10-233] The vhdl library search path for library "vl" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/vl"
+INFO: [VRFC 10-232] The veri library search path for library "vl" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/vl"
+INFO: [VRFC 10-233] The vhdl library search path for library "synopsys" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/synopsys"
+INFO: [VRFC 10-232] The veri library search path for library "synopsys" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/synopsys"
+INFO: [VRFC 10-233] The vhdl library search path for library "unisim" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/unisim"
+INFO: [VRFC 10-232] The veri library search path for library "unisim" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/unisim"
+INFO: [VRFC 10-233] The vhdl library search path for library "unimacro" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/unimacro"
+INFO: [VRFC 10-232] The veri library search path for library "unimacro" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/unimacro"
+INFO: [VRFC 10-233] The vhdl library search path for library "unifast" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/unifast"
+INFO: [VRFC 10-232] The veri library search path for library "unifast" is now "C:/Xilinx/Vivado/2016.2/data/xsim/vhdl/unifast"
+INFO: [VRFC 10-233] The vhdl library search path for library "simprims_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/simprims_ver"
+INFO: [VRFC 10-232] The veri library search path for library "simprims_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/simprims_ver"
+INFO: [VRFC 10-233] The vhdl library search path for library "unisims_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/unisims_ver"
+INFO: [VRFC 10-232] The veri library search path for library "unisims_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/unisims_ver"
+INFO: [VRFC 10-233] The vhdl library search path for library "unimacro_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/unimacro_ver"
+INFO: [VRFC 10-232] The veri library search path for library "unimacro_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/unimacro_ver"
+INFO: [VRFC 10-233] The vhdl library search path for library "unifast_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/unifast_ver"
+INFO: [VRFC 10-232] The veri library search path for library "unifast_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/unifast_ver"
+INFO: [VRFC 10-233] The vhdl library search path for library "secureip" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/secureip"
+INFO: [VRFC 10-232] The veri library search path for library "secureip" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/secureip"
+INFO: [XSIM 43-3427] Library Mapping: Sourcing library mapping file "xsim.ini".
+INFO: [VRFC 10-233] The vhdl library search path for library "xil_defaultlib" is now "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.sim/sim_1/impl/timing/xsim.dir/xil_defaultlib"
+INFO: [VRFC 10-232] The veri library search path for library "xil_defaultlib" is now "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.sim/sim_1/impl/timing/xsim.dir/xil_defaultlib"
+INFO: [VRFC 10-233] The vhdl library search path for library "xil_defaultlib" is now "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.sim/sim_1/impl/timing/xsim.dir/xil_defaultlib"
+INFO: [VRFC 10-232] The veri library search path for library "xil_defaultlib" is now "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.sim/sim_1/impl/timing/xsim.dir/xil_defaultlib"
+INFO: [VRFC 10-233] The vhdl library search path for library "simprims_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/simprims_ver"
+INFO: [VRFC 10-232] The veri library search path for library "simprims_ver" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/simprims_ver"
+INFO: [VRFC 10-233] The vhdl library search path for library "secureip" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/secureip"
+INFO: [VRFC 10-232] The veri library search path for library "secureip" is now "C:/Xilinx/Vivado/2016.2/data/xsim/verilog/secureip"
+INFO: [VRFC 10-233] The vhdl library search path for library "work" is now "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.sim/sim_1/impl/timing/xsim.dir/work"
+INFO: [VRFC 10-232] The veri library search path for library "work" is now "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.sim/sim_1/impl/timing/xsim.dir/work"
+Starting static elaboration
+INFO: [VRFC 10-520] compiling module glbl [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.sim/sim_1/impl/timing/chip_8_TB_A_time_impl.v:21694]
+INFO: [VRFC 10-639] executing chip_8_TB_A(Behavioral) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sim_1/new/chip_8_TB_A.vhd:4]
+INFO: [VRFC 10-639] executing chip_8A_default(Behavioral) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A.vhd:4]
+INFO: [VRFC 10-639] executing core_default(Behavioral) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/core.vhd:6]
+INFO: [VRFC 10-639] executing mem_controller_default(Behavioral) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:6]
+INFO: [VRFC 10-639] executing mem_mod_default(Behavioral) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_mod.vhd:5]
+INFO: [VRFC 10-639] executing game_rom_default(Behavioral) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/game_rom.vhd:5]
+INFO: [VRFC 10-639] executing time_keeper_default(Behavioral) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/time_keeper.vhd:5]
+INFO: [VRFC 10-639] executing vga_controller_default(Behavioral) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:4]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+SDG Object Count: 1017, SDG Object Memory Usage: 125 KB.
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.core [core_default]
+Compiling architecture behavioral of entity xil_defaultlib.mem_mod [mem_mod_default]
+Compiling architecture behavioral of entity xil_defaultlib.game_rom [game_rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.mem_controller [mem_controller_default]
+Compiling architecture behavioral of entity xil_defaultlib.time_keeper [time_keeper_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_controller [vga_controller_default]
+Compiling architecture behavioral of entity xil_defaultlib.chip_8A [chip_8a_default]
+Compiling architecture behavioral of entity xil_defaultlib.chip_8_tb_a
+C:\Xilinx\Vivado\2016.2\data\..\tps\llvm\3.2\win64.o\bin\Release\clang.exe -std=gnu89 -nobuiltininc -nostdinc++ -S -fbracket-depth=1048576 -sim -IC:\Xilinx\Vivado\2016.2\data\..\tps\mingw\4.4.3\win64.o\nt64\bin/../lib/gcc/x86_64-w64-mingw32/4.4.3/include -IC:\Xilinx\Vivado\2016.2\data\..\tps\mingw\4.4.3\win64.o\nt64\bin/../lib/gcc/x86_64-w64-mingw32/4.4.3/include-fixed -IC:\Xilinx\Vivado\2016.2\data\..\tps\mingw\4.4.3\win64.o\nt64\bin/../x86_64-w64-mingw32/include  -I"C:\Xilinx\Vivado\2016.2\data/xsim/include" "xsim.dir/chip_8_TB_A_time_impl/obj/xsim_1.c" -O0 -sim -o "xsim.dir/chip_8_TB_A_time_impl/obj/xsim_1.win64.as"
+C:\Xilinx\Vivado\2016.2\data\..\tps\mingw\4.9.1\win64.o\nt64\bin\as.exe -W "xsim.dir/chip_8_TB_A_time_impl/obj/xsim_1.win64.as" -o "xsim.dir/chip_8_TB_A_time_impl/obj/xsim_1.win64.obj"
+Linking with command:
+C:\Xilinx\Vivado\2016.2\data\..\tps\mingw\4.4.3\win64.o\nt64\bin\x86_64-w64-mingw32-gcc.exe -std=gnu89 -Wa,-W -O -Wl,--stack,104857600 -o "xsim.dir/chip_8_TB_A_time_impl/xsimk.exe"   "xsim.dir/chip_8_TB_A_time_impl/obj/xsim_0.win64.obj" "xsim.dir/chip_8_TB_A_time_impl/obj/xsim_1.win64.obj" "C:\Xilinx\Vivado\2016.2\lib\win64.o\\librdi_simulator_kernel.dll" "C:\Xilinx\Vivado\2016.2\lib\win64.o\\librdi_simbridge_kernel.dll"
+Built simulation snapshot chip_8_TB_A_time_impl

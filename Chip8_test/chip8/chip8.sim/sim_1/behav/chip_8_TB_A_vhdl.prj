@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../chip8.srcs/sources_1/new/game_rom.vhd"
+vhdl xil_defaultlib  "../../../chip8.srcs/sources_1/new/mem_mod.vhd"
+vhdl xil_defaultlib  "../../../chip8.srcs/sources_1/new/clock_div.vhd"
+vhdl xil_defaultlib  "../../../chip8.srcs/sources_1/new/vga_controller.vhd"
+vhdl xil_defaultlib  "../../../chip8.srcs/sources_1/new/time_keeper.vhd"
+vhdl xil_defaultlib  "../../../chip8.srcs/sources_1/new/core.vhd"
+vhdl xil_defaultlib  "../../../chip8.srcs/sources_1/new/mem_controller.vhd"
+vhdl xil_defaultlib  "../../../chip8.srcs/sources_1/new/chip_8A.vhd"
+vhdl xil_defaultlib  "../../../chip8.srcs/sim_1/new/chip_8_TB_A.vhd"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.sim/sim_1/synth/func/chip_8_TB_A_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chip_8A_board
+INFO: [VRFC 10-311] analyzing module core
+INFO: [VRFC 10-311] analyzing module game_rom
+INFO: [VRFC 10-311] analyzing module mem_controller
+INFO: [VRFC 10-311] analyzing module mem_mod
+INFO: [VRFC 10-311] analyzing module time_keeper
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,107 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Sat Apr 22 15:58:30 2017
+| Host         : 2002-13 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file cntr_test_control_sets_placed.rpt
+| Design       : cntr_test
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    54 |
+| Unused register locations in slices containing registers |   192 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            4 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             148 |           68 |
+| Yes          | No                    | Yes                    |               6 |            6 |
+| Yes          | Yes                   | No                     |              97 |           30 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+----------------------------------------+--------------------------------------+------------------+----------------+
+|  Clock Signal  |              Enable Signal             |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++----------------+----------------------------------------+--------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | my_core/mem_valid0                     |                                      |                1 |              1 |
+|  clk_IBUF_BUFG | my_core/tmp_mem_write0                 |                                      |                1 |              1 |
+|  clk_IBUF_BUFG | my_core/mem_hold0                      |                                      |                1 |              1 |
+|  clk_IBUF_BUFG | my_core/cpu_REG[15][7]_i_2_n_0         | my_core/cpu_REG[15][7]_i_1_n_0       |                2 |              4 |
+|  clk_IBUF_BUFG | my_core/x0                             | my_core/x[3]_i_1_n_0                 |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/n0                             |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/reg_copy_num[3]_i_2_n_0        | my_core/reg_copy_num[3]_i_1_n_0      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[11]0               | my_core/cpu_REG[11][7]_i_1_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[0]0                |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[0]0                | my_core/cpu_REG[0][7]_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[10]0               |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[10]0               | my_core/cpu_REG[10][7]_i_1_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[11]0               |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[12]0               |                                      |                2 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[12]0               | my_core/cpu_REG[12][7]_i_1_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[13]0               |                                      |                3 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[13]0               | my_core/cpu_REG[13][7]_i_1_n_0       |                2 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[14]0               |                                      |                2 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[14]0               | my_core/cpu_REG[14][7]_i_1_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[1]0                |                                      |                2 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[1]0                | my_core/cpu_REG[1][7]_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[2]0                |                                      |                2 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[2]0                | my_core/cpu_REG[2][7]_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[3]0                |                                      |                3 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[3]0                | my_core/cpu_REG[3][7]_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[4]0                |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[4]0                | my_core/cpu_REG[4][7]_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[5]0                |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[5]0                | my_core/cpu_REG[5][7]_i_1_n_0        |                2 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[6]0                |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[6]0                | my_core/cpu_REG[6][7]_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[7]0                |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[7]0                | my_core/cpu_REG[7][7]_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[8]0                |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[8]0                | my_core/cpu_REG[8][7]_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[9]0                |                                      |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/cpu_REG_reg[9]0                | my_core/cpu_REG[9][7]_i_1_n_0        |                2 |              4 |
+|  clk_IBUF_BUFG | my_core/graphic_addressA[7]_i_1_n_0    | my_core/graphic_addressA[11]_i_1_n_0 |                2 |              4 |
+|  clk_IBUF_BUFG | my_core/graphic_addressB[7]_i_1_n_0    | my_core/graphic_addressB[11]_i_1_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/key_counter0                   | my_core/key_counter[3]_i_1_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | my_core/I0                             | my_core/I[11]_i_1_n_0                |                2 |              5 |
+|  clk_IBUF_BUFG |                                        |                                      |                4 |              5 |
+|  clk_IBUF_BUFG | my_core/mem_ret_state0                 |                                      |                3 |              6 |
+|  clk_IBUF_BUFG | my_core/current_state                  | my_core/sel0[6]                      |                6 |              6 |
+|  clk_IBUF_BUFG | my_core/I0                             |                                      |                3 |              7 |
+|  clk_IBUF_BUFG | my_core/BCD_left[7]_i_1_n_0            |                                      |                6 |              8 |
+|  clk_IBUF_BUFG | my_core/graphic_addressA[7]_i_1_n_0    |                                      |                4 |              8 |
+|  clk_IBUF_BUFG | my_core/SP0                            |                                      |                7 |              8 |
+|  clk_IBUF_BUFG | my_core/multi_count0                   | my_core/multi_count[7]_i_1_n_0       |                2 |              8 |
+|  clk_IBUF_BUFG | my_core/graphic_addressB[7]_i_1_n_0    |                                      |                4 |              8 |
+|  clk_IBUF_BUFG | my_core/memAddress0                    |                                      |                4 |             12 |
+|  clk_IBUF_BUFG | my_core/multi_address0                 |                                      |                6 |             12 |
+|  clk_IBUF_BUFG | my_core/PC0                            |                                      |                4 |             12 |
+|  clk_IBUF_BUFG | my_core/cpu_STACK_reg_0_15_0_5_i_1_n_0 |                                      |                2 |             16 |
++----------------+----------------------------------------+--------------------------------------+------------------+----------------+
+
+

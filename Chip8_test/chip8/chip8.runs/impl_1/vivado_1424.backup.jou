@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Apr 25 18:41:53 2017
+# Process ID: 1424
+# Current directory: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.runs/impl_1
+# Command line: vivado.exe -log chip_8B_board_debug.vdi -applog -messageDb vivado.pb -mode batch -source chip_8B_board_debug.tcl -notrace
+# Log file: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.runs/impl_1/chip_8B_board_debug.vdi
+# Journal file: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source chip_8B_board_debug.tcl -notrace

@@ -1,0 +1,7 @@
+Running: xsim.dir/chip_8_TB_A_time_synth/xsimk.exe -simmode gui -wdb chip_8_TB_A_time_synth.wdb -simrunnum 0 -socket 49491
+Design successfully loaded
+Design Loading Memory Usage: 10796 KB (Peak: 10796 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 19552 KB (Peak: 19552 KB)
+Simulation CPU Usage: 358 ms

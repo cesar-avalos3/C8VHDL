@@ -1,0 +1,22 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/game_rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity game_rom
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_mod.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mem_mod
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/clock_div.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_div
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_controller
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/time_keeper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity time_keeper
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity core
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mem_controller
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity chip_8A
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8B_board_debug.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity chip_8B_board_debug
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity chip_8A_board
+INFO: [VRFC 10-163] Analyzing VHDL file "H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sim_1/new/chip_8_TB_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity chip_8_TB_A

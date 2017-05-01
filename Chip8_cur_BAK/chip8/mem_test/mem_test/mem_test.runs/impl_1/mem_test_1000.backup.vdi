@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sat Apr 22 20:12:58 2017
+# Process ID: 1000
+# Current directory: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/mem_test/mem_test/mem_test.runs/impl_1
+# Command line: vivado.exe -log mem_test.vdi -applog -messageDb vivado.pb -mode batch -source mem_test.tcl -notrace
+# Log file: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/mem_test/mem_test/mem_test.runs/impl_1/mem_test.vdi
+# Journal file: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/mem_test/mem_test/mem_test.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source mem_test.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sat Apr 22 20:17:12 2017
+# Process ID: 8124
+# Current directory: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/mem_test/mem_test/mem_test.runs/impl_1
+# Command line: vivado.exe -log mem_test.vdi -applog -messageDb vivado.pb -mode batch -source mem_test.tcl -notrace
+# Log file: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/mem_test/mem_test/mem_test.runs/impl_1/mem_test.vdi
+# Journal file: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/mem_test/mem_test/mem_test.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source mem_test.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
