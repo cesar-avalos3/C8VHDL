@@ -1,0 +1,77 @@
+ 1 2 3 C                                   1 2 3 4
+ 4 5 6 D    This is emulated with these    Q W E R
+ 7 8 9 E    keyboard keys -->              A S D F
+ A 0 B F                                   Z X C V
+
+Game : Hidden
+Keys   -  CH8 keys  - PC Keyboard   - FPGA board sugg
+Up     -     2      - 2				-	F15
+Down   -     8      - S				-	V10
+Left   -     4      - Q				-	T16
+Right  -     6      - E				-	R10
+Enter  -     5      - W				-	E16
+
+Game : Blitz
+Keys   -  CH8 keys  - PC Keyboard   - FPGA board sugg
+Fire   -     5      - W				-	E16
+
+Game : Cave (hard as balls)
+Keys   -  CH8 keys  - PC Keyboard   - FPGA board sugg
+Up     -     2      - 2				-	F15
+Down   -     8      - S				-	V10
+Left   -     4      - Q				-	T16
+Right  -     6      - E				-	R10
+Start  -     F      - V				-	E16
+
+Game : Brix
+Keys   -  CH8 keys  - PC Keyboard   - FPGA board sugg
+Left   -     4      - Q				-	T16
+Right  -     6      - E				-	R10
+
+Game : Kaleid (trippy)
+Keys   	   -  CH8 keys  - PC Keyboard   - FPGA board sugg
+Up     	   -     2      - 2				-	F15
+Down   	   -     8      - S				-	V10
+Left   	   -     4      - Q				-	T16
+Right  	   -     6      - E				-	R10
+Draw/Erase -     F      - V				-	E16
+
+Game : Missile
+Keys   -  CH8 keys  - PC Keyboard   - FPGA board sugg
+Fire   -     8      - S				-	V10
+
+Game : Merlin
+Keys   	  	-  CH8 keys  - PC Keyboard   	- FPGA board sugg
+Up-Left   	-     4      - Q				-		T16
+Up-Right   	-     5      - W				-		F15
+Down-Left   -     7      - A				-		V10
+Down-Right  -     8      - S				-		R10
+
+Game : PUZZLE
+Keys   -  CH8 keys  - PC Keyboard   - FPGA board sugg
+Up     -     2      - 2				-	F15
+Down   -     8      - S				-	V10
+Left   -     4      - Q				-	T16
+Right  -     6      - E				-	R10
+
+Game : Vers (TRON)
+Keys   -  CH8 keys  - PC Keyboard   - FPGA board sugg
+-- Player 1
+Up     -     1      - A				-	F15
+Down   -     4      - Z				-	V10
+Left   -     7      - 1				-	T16
+Right  -     A      - Q				-	R10
+-- Player 2
+Up     -     C      - 4				-	F15
+Down   -     D      - R				-	V10
+Left   -     E      - F				-	T16
+Right  -     F      - V				-	R10
+
+Game : Tank
+Keys   -  CH8 keys  - PC Keyboard   - FPGA board sugg
+-- Player 1
+Down   -     1      - A				-	F15
+Up 	   -     4      - Z				-	V10
+Left   -     7      - 1				-	T16
+Right  -     A      - Q				-	R10
+Fire   -     5      - W				-	E16
