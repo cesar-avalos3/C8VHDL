@@ -52,6 +52,7 @@ architecture Behavioral of core is
                     memA, memB, Decode,
                     readKey0, readKey1, readKey2, readKey3,
                     readKey4, readKey5, readKey6, readKey7,
+                    readDelay0, readDelay1, readDelay2,
                     O_NOP, O_CLEAR, O_RET, O_JUMP, O_CALL, 
                     O_SNI_X_EQ_KK, O_SNI_X_NE_KK, O_SNI_X_EQ_Y, O_LD_X_KK, O_ADD_X_KK, 
                     O_LD_X_Y, O_OR_X_Y, O_AND_X_Y, O_XOR_X_Y, O_ADC_X_Y, 
@@ -271,7 +272,22 @@ begin
                 when readKey7  => 
                     map_KEY(14) <= mem_ret_data( 7 downto 4 );
                     map_KEY(15) <= mem_ret_data( 3 downto 0 );
-                    current_state <= fetchA;                   
+                    memAddress <= x"088";
+                    mem_ret_state <= readDelay0;
+                    current_state <= memA;
+                when readDelay0  =>
+                    instruction_delay( 23 downto 16) <= mem_ret_data;
+                    memAddress <= x"089";
+                    mem_ret_state <= readDelay1;
+                    current_state <= memA;
+                when readDelay1  =>
+                    instruction_delay( 15 downto 8) <= mem_ret_data;
+                    memAddress <= x"08A";
+                    mem_ret_state <= readDelay2;
+                    current_state <= memA;
+                when readDelay2  =>
+                    instruction_delay( 7 downto 0) <= mem_ret_data;
+                    current_state <= fetchA;                 
                 when fetchA =>
                     cpu_state <= x"03";
                     memAddress <= PC;

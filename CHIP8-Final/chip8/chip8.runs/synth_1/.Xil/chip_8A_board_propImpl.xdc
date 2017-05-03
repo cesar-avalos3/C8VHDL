@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc rfile:../../../chip8.srcs/constrs_1/new/chip8_const.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc rfile:../../../chip8.srcs/constrs_1/new/chip8_const.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports clk]
 set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]

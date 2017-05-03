@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date             : Sun Apr 30 18:27:51 2017
-| Host             : 2002-13 running 64-bit Service Pack 1  (build 7601)
+| Date             : Mon May 01 15:49:42 2017
+| Host             : 2002-16 running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file chip_8A_board_power_routed.rpt -pb chip_8A_board_power_summary_routed.pb -rpx chip_8A_board_power_routed.rpx
 | Design           : chip_8A_board
 | Device           : xc7a100tcsg324-1
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.116 |
-| Dynamic (W)              | 0.019 |
+| Total On-Chip Power (W)  | 0.114 |
+| Dynamic (W)              | 0.016 |
 | Device Static (W)        | 0.098 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 84.5  |
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.005 |     2821 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     1230 |     63400 |            1.94 |
+| Slice Logic              |     0.005 |     2809 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     1222 |     63400 |            1.93 |
 |   CARRY4                 |    <0.001 |       93 |     15850 |            0.59 |
 |   LUT as Distributed RAM |    <0.001 |       64 |     19000 |            0.34 |
-|   Register               |    <0.001 |      982 |    126800 |            0.77 |
-|   F7/F8 Muxes            |    <0.001 |      140 |     63400 |            0.22 |
+|   Register               |    <0.001 |     1011 |    126800 |            0.80 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
+|   F7/F8 Muxes            |    <0.001 |       94 |     63400 |            0.15 |
 |   Others                 |     0.000 |       19 |       --- |             --- |
-| Signals                  |     0.006 |     2144 |       --- |             --- |
+| Signals                  |     0.006 |     2255 |       --- |             --- |
 | Block RAM                |     0.002 |       18 |       135 |           13.33 |
-| I/O                      |     0.004 |       54 |       210 |           25.71 |
+| I/O                      |     0.003 |       54 |       210 |           25.71 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.116 |          |           |                 |
+| Total                    |     0.114 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.030 |       0.015 |      0.015 |
+| Vccint    |       1.000 |     0.029 |       0.013 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -141,10 +141,10 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| chip_8A_board               |     0.019 |
+| chip_8A_board               |     0.016 |
 |   my_clock_div              |    <0.001 |
 |   my_core                   |     0.007 |
-|   my_mem_controller         |     0.005 |
+|   my_mem_controller         |     0.004 |
 |     MEM                     |    <0.001 |
 |     ROM                     |     0.002 |
 |   my_time_keeper            |    <0.001 |

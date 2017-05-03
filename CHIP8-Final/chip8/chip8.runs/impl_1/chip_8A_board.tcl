@@ -51,12 +51,12 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.cache/wt [current_project]
-  set_property parent.project_path H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.xpr [current_project]
-  set_property ip_repo_paths h:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.cache/ip [current_project]
-  set_property ip_output_repo h:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.cache/ip [current_project]
-  add_files -quiet H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.runs/synth_1/chip_8A_board.dcp
-  read_xdc H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc
+  set_property webtalk.parent_dir H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.cache/wt [current_project]
+  set_property parent.project_path H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.xpr [current_project]
+  set_property ip_repo_paths h:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.cache/ip [current_project]
+  set_property ip_output_repo h:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.cache/ip [current_project]
+  add_files -quiet H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.runs/synth_1/chip_8A_board.dcp
+  read_xdc H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc
   link_design -top chip_8A_board -part xc7a100tcsg324-1
   write_hwdef -file chip_8A_board.hwdef
   close_msg_db -file init_design.pb

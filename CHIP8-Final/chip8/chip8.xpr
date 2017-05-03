@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.xpr">
+<Project Version="7" Minor="14" Path="H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="54fc8cd302594056840467f8f007c0c8"/>

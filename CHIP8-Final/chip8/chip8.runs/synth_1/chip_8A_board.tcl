@@ -10,27 +10,27 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.cache/wt [current_project]
-set_property parent.project_path H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.xpr [current_project]
+set_property webtalk.parent_dir H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.cache/wt [current_project]
+set_property parent.project_path H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_vhdl -library xil_defaultlib {
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/game_rom.vhd
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_mod.vhd
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/clock_div.vhd
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/time_keeper.vhd
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/core.vhd
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_controller.vhd
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A.vhd
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8B_board_debug.vhd
-  H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/game_rom.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_mod.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/clock_div.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/vga_controller.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/time_keeper.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/core.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_controller.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8A.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8B_board_debug.vhd
+  H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
-read_xdc H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc
-set_property used_in_implementation false [get_files H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc]
+read_xdc H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc
+set_property used_in_implementation false [get_files H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc]
 
 
 synth_design -top chip_8A_board -part xc7a100tcsg324-1

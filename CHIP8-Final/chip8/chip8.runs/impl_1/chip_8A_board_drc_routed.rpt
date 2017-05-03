@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Sun Apr 30 18:27:49 2017
-| Host         : 2002-13 running 64-bit Service Pack 1  (build 7601)
+| Date         : Mon May 01 15:49:40 2017
+| Host         : 2002-16 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc -file chip_8A_board_drc_routed.rpt -pb chip_8A_board_drc_routed.pb
 | Design       : chip_8A_board
 | Device       : xc7a100tcsg324-1
@@ -23,7 +23,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 21
+             Violations found: 19
 
 2. REPORT DETAILS
 -----------------
@@ -82,12 +82,12 @@ Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net my_core/RAND_reg[1]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[1]__0_LDC_i_1/O, cell my_core/RAND_reg[1]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net my_core/RAND_reg[15]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[15]__0_LDC_i_1/O, cell my_core/RAND_reg[15]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net my_core/RAND_reg[2]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[2]__0_LDC_i_1/O, cell my_core/RAND_reg[2]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net my_core/RAND_reg[1]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[1]__0_LDC_i_1/O, cell my_core/RAND_reg[1]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
@@ -107,35 +107,25 @@ Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net my_core/RAND_reg[4]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[4]__0_LDC_i_1/O, cell my_core/RAND_reg[4]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net my_core/RAND_reg[5]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[5]__0_LDC_i_1/O, cell my_core/RAND_reg[5]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net my_core/RAND_reg[5]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[5]__0_LDC_i_1/O, cell my_core/RAND_reg[5]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net my_core/RAND_reg[6]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[6]__0_LDC_i_1/O, cell my_core/RAND_reg[6]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net my_core/RAND_reg[6]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[6]__0_LDC_i_1/O, cell my_core/RAND_reg[6]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net my_core/RAND_reg[7]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[7]__0_LDC_i_1/O, cell my_core/RAND_reg[7]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#17 Warning
 Gated clock check  
-Net my_core/RAND_reg[6]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[6]__0_LDC_i_1/O, cell my_core/RAND_reg[6]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#18 Warning
-Gated clock check  
-Net my_core/RAND_reg[7]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[7]__0_LDC_i_1/O, cell my_core/RAND_reg[7]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#19 Warning
-Gated clock check  
 Net my_core/RAND_reg[8]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[8]__0_LDC_i_1/O, cell my_core/RAND_reg[8]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-PDRC-153#20 Warning
+PDRC-153#18 Warning
 Gated clock check  
 Net my_core/RAND_reg[9]__0_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin my_core/RAND_reg[9]__0_LDC_i_1/O, cell my_core/RAND_reg[9]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

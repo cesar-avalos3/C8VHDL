@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1493594666">
-  <File Type="RDS-PROPCONSTRS" Name="chip_8A_board_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1493671564">
   <File Type="PA-TCL" Name="chip_8A_board.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="chip_8A_board_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="chip_8A_board.vds"/>
   <File Type="RDS-UTIL" Name="chip_8A_board_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="chip_8A_board_utilization_synth.pb"/>

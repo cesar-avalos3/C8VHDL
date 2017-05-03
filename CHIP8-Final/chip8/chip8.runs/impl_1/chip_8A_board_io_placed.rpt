@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Sun Apr 30 18:27:18 2017
-| Host         : 2002-13 running 64-bit Service Pack 1  (build 7601)
+| Date         : Mon May 01 15:49:02 2017
+| Host         : 2002-16 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_io -file chip_8A_board_io_placed.rpt
 | Design       : chip_8A_board
 | Device       : xc7a100t

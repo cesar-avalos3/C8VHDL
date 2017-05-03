@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.runs/impl_1'
+HD_PWD='H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

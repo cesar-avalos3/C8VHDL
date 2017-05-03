@@ -138,7 +138,7 @@ begin
                     --step_active <= '1'; -- for debugging memory early
                 when copy_key_map =>
                     copy_start <= '0' & currentGame & x"080";
-                    copy_end <= '0' & currentGame & x"087";
+                    copy_end <= '0' & currentGame & x"08A";
                     copy_to <= '1' & x"1080";
                     copy_return <= copy_init_high;
                     current_state <= copy_read;

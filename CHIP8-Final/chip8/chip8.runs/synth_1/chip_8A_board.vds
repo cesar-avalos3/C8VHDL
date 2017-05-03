@@ -2,12 +2,12 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sun Apr 30 18:24:30 2017
-# Process ID: 10096
-# Current directory: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.runs/synth_1
+# Start of session at: Mon May 01 15:46:09 2017
+# Process ID: 1724
+# Current directory: H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.runs/synth_1
 # Command line: vivado.exe -log chip_8A_board.vds -mode batch -messageDb vivado.pb -notrace -source chip_8A_board.tcl
-# Log file: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.runs/synth_1/chip_8A_board.vds
-# Journal file: H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.runs/synth_1\vivado.jou
+# Log file: H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.runs/synth_1/chip_8A_board.vds
+# Journal file: H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source chip_8A_board.tcl -notrace
 Command: synth_design -top chip_8A_board -part xc7a100tcsg324-1
@@ -15,38 +15,38 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10228 
+INFO: Helper process launched with PID 7552 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 297.582 ; gain = 88.137
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 296.746 ; gain = 87.734
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'chip_8A_board' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:30]
-INFO: [Synth 8-3491] module 'core' declared at 'H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/core.vhd:6' bound to instance 'my_core' of component 'core' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:223]
-INFO: [Synth 8-638] synthesizing module 'core' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/core.vhd:43]
-INFO: [Synth 8-226] default block is never used [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/core.vhd:315]
-INFO: [Synth 8-256] done synthesizing module 'core' (1#1) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/core.vhd:43]
-INFO: [Synth 8-3491] module 'clock_div' declared at 'H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/clock_div.vhd:5' bound to instance 'my_clock_div' of component 'clock_div' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:256]
-INFO: [Synth 8-638] synthesizing module 'clock_div' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/clock_div.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'clock_div' (2#1) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/clock_div.vhd:10]
-INFO: [Synth 8-3491] module 'mem_controller' declared at 'H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:6' bound to instance 'my_mem_controller' of component 'mem_controller' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:261]
-INFO: [Synth 8-638] synthesizing module 'mem_controller' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:26]
-INFO: [Synth 8-3491] module 'mem_mod' declared at 'H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_mod.vhd:5' bound to instance 'MEM' of component 'mem_mod' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:74]
-INFO: [Synth 8-638] synthesizing module 'mem_mod' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_mod.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'mem_mod' (3#1) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_mod.vhd:13]
-INFO: [Synth 8-3491] module 'game_rom' declared at 'H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/game_rom.vhd:5' bound to instance 'ROM' of component 'game_rom' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:81]
-INFO: [Synth 8-638] synthesizing module 'game_rom' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/game_rom.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'game_rom' (4#1) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/game_rom.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'mem_controller' (5#1) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:26]
-INFO: [Synth 8-3491] module 'time_keeper' declared at 'H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/time_keeper.vhd:5' bound to instance 'my_time_keeper' of component 'time_keeper' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:281]
-INFO: [Synth 8-638] synthesizing module 'time_keeper' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/time_keeper.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'time_keeper' (6#1) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/time_keeper.vhd:19]
-INFO: [Synth 8-3491] module 'vga_controller' declared at 'H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:6' bound to instance 'my_vga_controller' of component 'vga_controller' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:294]
-INFO: [Synth 8-638] synthesizing module 'vga_controller' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:29]
-WARNING: [Synth 8-614] signal 'requestBuffer' is read in the process but is not in the sensitivity list [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:264]
-INFO: [Synth 8-256] done synthesizing module 'vga_controller' (7#1) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'chip_8A_board' (8#1) [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'chip_8A_board' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:30]
+INFO: [Synth 8-3491] module 'core' declared at 'H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/core.vhd:6' bound to instance 'my_core' of component 'core' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:223]
+INFO: [Synth 8-638] synthesizing module 'core' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/core.vhd:43]
+INFO: [Synth 8-226] default block is never used [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/core.vhd:331]
+INFO: [Synth 8-256] done synthesizing module 'core' (1#1) [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/core.vhd:43]
+INFO: [Synth 8-3491] module 'clock_div' declared at 'H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/clock_div.vhd:5' bound to instance 'my_clock_div' of component 'clock_div' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:256]
+INFO: [Synth 8-638] synthesizing module 'clock_div' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/clock_div.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'clock_div' (2#1) [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/clock_div.vhd:10]
+INFO: [Synth 8-3491] module 'mem_controller' declared at 'H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:6' bound to instance 'my_mem_controller' of component 'mem_controller' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'mem_controller' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:26]
+INFO: [Synth 8-3491] module 'mem_mod' declared at 'H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_mod.vhd:5' bound to instance 'MEM' of component 'mem_mod' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'mem_mod' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_mod.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'mem_mod' (3#1) [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_mod.vhd:13]
+INFO: [Synth 8-3491] module 'game_rom' declared at 'H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/game_rom.vhd:5' bound to instance 'ROM' of component 'game_rom' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'game_rom' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/game_rom.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'game_rom' (4#1) [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/game_rom.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'mem_controller' (5#1) [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:26]
+INFO: [Synth 8-3491] module 'time_keeper' declared at 'H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/time_keeper.vhd:5' bound to instance 'my_time_keeper' of component 'time_keeper' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:281]
+INFO: [Synth 8-638] synthesizing module 'time_keeper' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/time_keeper.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'time_keeper' (6#1) [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/time_keeper.vhd:19]
+INFO: [Synth 8-3491] module 'vga_controller' declared at 'H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:6' bound to instance 'my_vga_controller' of component 'vga_controller' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:294]
+INFO: [Synth 8-638] synthesizing module 'vga_controller' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:29]
+WARNING: [Synth 8-614] signal 'requestBuffer' is read in the process but is not in the sensitivity list [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:264]
+INFO: [Synth 8-256] done synthesizing module 'vga_controller' (7#1) [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'chip_8A_board' (8#1) [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/chip_8A_board.vhd:30]
 WARNING: [Synth 8-3331] design vga_controller has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 396.066 ; gain = 186.621
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 398.109 ; gain = 189.098
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -56,41 +56,41 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 396.066 ; gain = 186.621
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:29 . Memory (MB): peak = 398.109 ; gain = 189.098
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc]
-Finished Parsing XDC File [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/chip_8A_board_propImpl.xdc].
+Parsing XDC File [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc]
+Finished Parsing XDC File [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/constrs_1/new/chip8_const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/chip_8A_board_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/chip_8A_board_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 684.219 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 684.301 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:57 . Memory (MB): peak = 684.219 ; gain = 474.773
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:01:01 . Memory (MB): peak = 684.301 ; gain = 475.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:57 . Memory (MB): peak = 684.219 ; gain = 474.773
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:01:01 . Memory (MB): peak = 684.301 ; gain = 475.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:57 . Memory (MB): peak = 684.219 ; gain = 474.773
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:01:01 . Memory (MB): peak = 684.301 ; gain = 475.289
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/core.vhd:155]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/core.vhd:140]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/core.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/core.vhd:141]
 INFO: [Synth 8-5546] ROM "current_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "cpu_REG_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cpu_REG_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -232,6 +232,7 @@ INFO: [Synth 8-5546] ROM "cpu_state" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "active" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "I" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "key_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "instruction_delay" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "map_KEY[15]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "map_KEY[13]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "map_KEY[11]" won't be mapped to RAM because it is too sparse
@@ -248,13 +249,13 @@ INFO: [Synth 8-5546] ROM "sprite_buffer" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "graphic_bufferB" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "BCD_total" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "reg_copy_num" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'debug_read_data_reg[7:0]' into 's_dataOut_reg[7:0]' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:247]
-INFO: [Synth 8-4471] merging register 'vga_blue_reg_reg[3:0]' into 'vga_red_reg_reg[3:0]' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:308]
+INFO: [Synth 8-4471] merging register 'debug_read_data_reg[7:0]' into 's_dataOut_reg[7:0]' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/mem_controller.vhd:247]
+INFO: [Synth 8-4471] merging register 'vga_blue_reg_reg[3:0]' into 'vga_red_reg_reg[3:0]' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:308]
 INFO: [Synth 8-5546] ROM "audioAMPsig" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-327] inferring latch for variable 'memWrite_reg' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:121]
-WARNING: [Synth 8-327] inferring latch for variable 'active_reg' [H:/EECS_443_project/C8VHDL/Chip8_cur_BAK/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:120]
+WARNING: [Synth 8-327] inferring latch for variable 'memWrite_reg' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:121]
+WARNING: [Synth 8-327] inferring latch for variable 'active_reg' [H:/EECS_443_project/C8VHDL/CHIP8-Final/chip8/chip8.srcs/sources_1/new/vga_controller.vhd:120]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:01:02 . Memory (MB): peak = 684.219 ; gain = 474.773
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:01:07 . Memory (MB): peak = 684.301 ; gain = 475.289
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -289,8 +290,7 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 41    
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 36    
-	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
+	                7 Bit    Registers := 3     
 	                5 Bit    Registers := 4     
 	                4 Bit    Registers := 28    
 	                3 Bit    Registers := 6     
@@ -301,6 +301,8 @@ Detailed RTL Component Info :
 	              128 Bit         RAMs := 1     
 +---Muxes : 
 	  12 Input     64 Bit        Muxes := 1     
+	  68 Input     24 Bit        Muxes := 1     
+	  67 Input     24 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 6     
 	  20 Input     24 Bit        Muxes := 2     
 	   8 Input     24 Bit        Muxes := 1     
@@ -308,44 +310,39 @@ Detailed RTL Component Info :
 	   2 Input     17 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 3     
 	   6 Input     12 Bit        Muxes := 1     
-	  64 Input     12 Bit        Muxes := 3     
+	  67 Input     12 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 11    
 	   9 Input      8 Bit        Muxes := 1     
-	  17 Input      8 Bit        Muxes := 1     
-	  64 Input      8 Bit        Muxes := 1     
-	   6 Input      8 Bit        Muxes := 1     
+	  67 Input      8 Bit        Muxes := 2     
+	  67 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 2     
-	  23 Input      6 Bit        Muxes := 1     
 	  10 Input      6 Bit        Muxes := 2     
 	   3 Input      6 Bit        Muxes := 1     
-	  16 Input      6 Bit        Muxes := 1     
-	  64 Input      5 Bit        Muxes := 2     
 	   3 Input      5 Bit        Muxes := 1     
 	  20 Input      5 Bit        Muxes := 3     
 	   2 Input      5 Bit        Muxes := 4     
-	  64 Input      4 Bit        Muxes := 2     
+	  67 Input      4 Bit        Muxes := 2     
 	  10 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 2     
-	  64 Input      3 Bit        Muxes := 25    
+	  67 Input      3 Bit        Muxes := 5     
 	   2 Input      3 Bit        Muxes := 4     
 	  22 Input      3 Bit        Muxes := 1     
 	  20 Input      3 Bit        Muxes := 1     
 	   8 Input      3 Bit        Muxes := 2     
 	  12 Input      3 Bit        Muxes := 1     
-	  64 Input      2 Bit        Muxes := 10    
+	  67 Input      2 Bit        Muxes := 10    
 	   2 Input      2 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 7     
 	   5 Input      1 Bit        Muxes := 5     
 	  16 Input      1 Bit        Muxes := 6     
 	   4 Input      1 Bit        Muxes := 3     
-	  64 Input      1 Bit        Muxes := 43    
+	  67 Input      1 Bit        Muxes := 58    
 	   2 Input      1 Bit        Muxes := 77    
-	   6 Input      1 Bit        Muxes := 16    
-	   7 Input      1 Bit        Muxes := 1     
 	  10 Input      1 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 11    
 	  20 Input      1 Bit        Muxes := 20    
+	   8 Input      1 Bit        Muxes := 10    
 	  12 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -383,42 +380,38 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 39    
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 28    
-	                6 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
 	                4 Bit    Registers := 21    
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 5     
 +---Muxes : 
+	  68 Input     24 Bit        Muxes := 1     
+	  67 Input     24 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
 	   6 Input     12 Bit        Muxes := 1     
-	  64 Input     12 Bit        Muxes := 3     
+	  67 Input     12 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 7     
 	   9 Input      8 Bit        Muxes := 1     
-	  17 Input      8 Bit        Muxes := 1     
-	  64 Input      8 Bit        Muxes := 1     
-	   6 Input      8 Bit        Muxes := 1     
+	  67 Input      8 Bit        Muxes := 2     
+	  67 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 2     
-	  23 Input      6 Bit        Muxes := 1     
 	  10 Input      6 Bit        Muxes := 2     
 	   3 Input      6 Bit        Muxes := 1     
-	  16 Input      6 Bit        Muxes := 1     
-	  64 Input      5 Bit        Muxes := 2     
 	   3 Input      5 Bit        Muxes := 1     
-	  64 Input      4 Bit        Muxes := 2     
+	  67 Input      4 Bit        Muxes := 2     
 	  10 Input      4 Bit        Muxes := 1     
-	  64 Input      3 Bit        Muxes := 25    
+	  67 Input      3 Bit        Muxes := 5     
 	   2 Input      3 Bit        Muxes := 3     
-	  64 Input      2 Bit        Muxes := 10    
+	  67 Input      2 Bit        Muxes := 10    
 	   2 Input      2 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 7     
 	   5 Input      1 Bit        Muxes := 4     
 	  16 Input      1 Bit        Muxes := 6     
 	   4 Input      1 Bit        Muxes := 3     
-	  64 Input      1 Bit        Muxes := 43    
+	  67 Input      1 Bit        Muxes := 58    
 	   2 Input      1 Bit        Muxes := 65    
-	   6 Input      1 Bit        Muxes := 16    
-	   7 Input      1 Bit        Muxes := 1     
 	  10 Input      1 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 1     
 Module clock_div 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -516,7 +509,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:01:02 . Memory (MB): peak = 684.219 ; gain = 474.773
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:01:08 . Memory (MB): peak = 684.301 ; gain = 475.289
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -536,13 +529,13 @@ INFO: [Synth 8-5546] ROM "cpu_STACK_reg[3]" won't be mapped to RAM because it is
 INFO: [Synth 8-5546] ROM "cpu_STACK_reg[2]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "cpu_STACK_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "cpu_STACK_reg[0]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "tmp_err_code" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "current_state" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "tmp_err_code" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "audioAMPsig" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:01:05 . Memory (MB): peak = 684.219 ; gain = 474.773
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:01:13 . Memory (MB): peak = 684.301 ; gain = 475.289
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:21 ; elapsed = 00:01:05 . Memory (MB): peak = 684.219 ; gain = 474.773
+Finished Parallel Reinference  : Time (s): cpu = 00:00:25 ; elapsed = 00:01:13 . Memory (MB): peak = 684.301 ; gain = 475.289
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -557,9 +550,9 @@ ROM:
 +---------------+------------+---------------+----------------+
 |Module Name    | RTL Object | Depth x Width | Implemented As | 
 +---------------+------------+---------------+----------------+
-|core           | cpu_state  | 64x8          | LUT            | 
+|core           | cpu_state  | 128x8         | LUT            | 
 |mem_controller | mem_state  | 32x8          | LUT            | 
-|core           | cpu_state  | 64x8          | LUT            | 
+|core           | cpu_state  | 128x8         | LUT            | 
 +---------------+------------+---------------+----------------+
 
 
@@ -587,118 +580,125 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][11]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][9]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][10]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][8]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][7]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][6]' (FDE) to 'my_core/instruction_delay_reg[13]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][6]' (FDE) to 'my_core/instruction_delay_reg[13]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][6]' (FDE) to 'my_core/instruction_delay_reg[13]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][6]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][5]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][5]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][5]' (FDE) to 'my_core/instruction_delay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][5]' (FDE) to 'my_core/instruction_delay_reg[13]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][11]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][9]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][10]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][8]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][7]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][6]' (FDE) to 'my_core/hex_digits_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][6]' (FDE) to 'my_core/hex_digits_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][6]' (FDE) to 'my_core/hex_digits_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[11][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[10][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[9][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[8][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[7][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[6][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[5][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[4][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[3][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[2][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[1][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[0][6]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[15][5]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[14][5]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[13][5]' (FDE) to 'my_core/hex_digits_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'my_core/hex_digits_reg[12][5]' (FDE) to 'my_core/hex_digits_reg[0][1]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\my_core/hex_digits_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_core/hex_digits_reg[0][0] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\my_mem_controller/copy_end_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_time_keeper/memAddress_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_vga_controller/tmp_mem_write_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_mem_controller/memReturn_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_core/mem_hold_reg )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\my_core/instruction_delay_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_core/instruction_delay_reg[23] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_vga_controller/vga_red_reg_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_vga_controller/active_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_core/tmp_err_code_reg[2] )
 WARNING: [Synth 8-3332] Sequential element (my_core/mem_hold_reg) is unused and will be removed from module chip_8A_board.
+WARNING: [Synth 8-3332] Sequential element (my_core/current_state_reg_rep[6]) is unused and will be removed from module chip_8A_board.
+WARNING: [Synth 8-3332] Sequential element (my_core/current_state_reg_rep[5]) is unused and will be removed from module chip_8A_board.
+WARNING: [Synth 8-3332] Sequential element (my_core/current_state_reg_rep[4]) is unused and will be removed from module chip_8A_board.
+WARNING: [Synth 8-3332] Sequential element (my_core/current_state_reg_rep[3]) is unused and will be removed from module chip_8A_board.
+WARNING: [Synth 8-3332] Sequential element (my_core/current_state_reg_rep[2]) is unused and will be removed from module chip_8A_board.
+WARNING: [Synth 8-3332] Sequential element (my_core/current_state_reg_rep[1]) is unused and will be removed from module chip_8A_board.
+WARNING: [Synth 8-3332] Sequential element (my_core/current_state_reg_rep[0]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/cpu_state_reg[7]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/cpu_state_reg[6]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/cpu_state_reg[5]) is unused and will be removed from module chip_8A_board.
@@ -708,8 +708,7 @@ WARNING: [Synth 8-3332] Sequential element (my_core/cpu_state_reg[2]) is unused 
 WARNING: [Synth 8-3332] Sequential element (my_core/cpu_state_reg[1]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/cpu_state_reg[0]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/tmp_err_code_reg[2]) is unused and will be removed from module chip_8A_board.
-WARNING: [Synth 8-3332] Sequential element (my_core/mem_ret_state_reg[4]) is unused and will be removed from module chip_8A_board.
-WARNING: [Synth 8-3332] Sequential element (my_core/instruction_delay_reg[0]) is unused and will be removed from module chip_8A_board.
+WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[0][0]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[15][11]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[14][11]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[13][11]) is unused and will be removed from module chip_8A_board.
@@ -790,19 +789,13 @@ WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[3][7]) is unu
 WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[2][7]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[1][7]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[0][7]) is unused and will be removed from module chip_8A_board.
-WARNING: [Synth 8-3332] Sequential element (my_core/instruction_delay_reg[13]) is unused and will be removed from module chip_8A_board.
+WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[0][1]) is unused and will be removed from module chip_8A_board.
 WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[15][6]) is unused and will be removed from module chip_8A_board.
-WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[14][6]) is unused and will be removed from module chip_8A_board.
-WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[13][6]) is unused and will be removed from module chip_8A_board.
-WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[12][6]) is unused and will be removed from module chip_8A_board.
-WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[11][6]) is unused and will be removed from module chip_8A_board.
-WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[10][6]) is unused and will be removed from module chip_8A_board.
-WARNING: [Synth 8-3332] Sequential element (my_core/hex_digits_reg[9][6]) is unused and will be removed from module chip_8A_board.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:01:15 . Memory (MB): peak = 684.219 ; gain = 474.773
+Finished Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:24 . Memory (MB): peak = 684.301 ; gain = 475.289
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:01:15 . Memory (MB): peak = 684.219 ; gain = 474.773
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:01:24 . Memory (MB): peak = 684.301 ; gain = 475.289
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -816,10 +809,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:01:23 . Memory (MB): peak = 686.824 ; gain = 477.379
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:33 . Memory (MB): peak = 694.000 ; gain = 484.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:24 . Memory (MB): peak = 698.625 ; gain = 489.180
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:33 . Memory (MB): peak = 707.313 ; gain = 498.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -841,16 +834,16 @@ INFO: [Synth 8-4480] The timing for the instance my_mem_controller/ROM/sys_RAM_r
 INFO: [Synth 8-4480] The timing for the instance my_mem_controller/ROM/sys_RAM_reg_1_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance my_mem_controller/ROM/sys_RAM_reg_1_7 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:24 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:34 . Memory (MB): peak = 729.973 ; gain = 520.961
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:40 ; elapsed = 00:01:24 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:46 ; elapsed = 00:01:34 . Memory (MB): peak = 729.973 ; gain = 520.961
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:40 ; elapsed = 00:01:24 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:46 ; elapsed = 00:01:34 . Memory (MB): peak = 729.973 ; gain = 520.961
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -867,7 +860,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:01:25 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:35 . Memory (MB): peak = 729.973 ; gain = 520.961
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -880,7 +873,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:01:25 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:35 . Memory (MB): peak = 729.973 ; gain = 520.961
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -892,25 +885,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:01:25 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:35 . Memory (MB): peak = 729.973 ; gain = 520.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:01:25 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:35 . Memory (MB): peak = 729.973 ; gain = 520.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:01:25 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:35 . Memory (MB): peak = 729.973 ; gain = 520.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:01:25 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:35 . Memory (MB): peak = 729.973 ; gain = 520.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -928,54 +921,61 @@ Report Cell Usage:
 +------+------------+------+
 |1     |BUFG        |     3|
 |2     |CARRY4      |    93|
-|3     |LUT1        |   223|
-|4     |LUT2        |   276|
-|5     |LUT3        |   107|
-|6     |LUT4        |   195|
-|7     |LUT5        |   206|
-|8     |LUT6        |   641|
-|9     |MUXF7       |   113|
-|10    |MUXF8       |    27|
+|3     |LUT1        |   226|
+|4     |LUT2        |   271|
+|5     |LUT3        |   118|
+|6     |LUT4        |   139|
+|7     |LUT5        |   211|
+|8     |LUT6        |   691|
+|9     |MUXF7       |    74|
+|10    |MUXF8       |    20|
 |11    |RAM16X1D    |    64|
 |12    |RAMB36E1    |     1|
 |13    |RAMB36E1_1  |     1|
 |14    |RAMB36E1_10 |     1|
-|15    |RAMB36E1_2  |     1|
-|16    |RAMB36E1_3  |     8|
-|17    |RAMB36E1_4  |     1|
-|18    |RAMB36E1_5  |     1|
-|19    |RAMB36E1_6  |     1|
-|20    |RAMB36E1_7  |     1|
-|21    |RAMB36E1_8  |     1|
-|22    |RAMB36E1_9  |     1|
-|23    |FDCE        |   111|
-|24    |FDPE        |    22|
-|25    |FDRE        |   825|
-|26    |FDSE        |     8|
-|27    |LDC         |    16|
-|28    |IBUF        |    22|
-|29    |OBUF        |    32|
+|15    |RAMB36E1_11 |     1|
+|16    |RAMB36E1_12 |     1|
+|17    |RAMB36E1_13 |     1|
+|18    |RAMB36E1_14 |     1|
+|19    |RAMB36E1_15 |     1|
+|20    |RAMB36E1_16 |     1|
+|21    |RAMB36E1_17 |     1|
+|22    |RAMB36E1_2  |     1|
+|23    |RAMB36E1_3  |     1|
+|24    |RAMB36E1_4  |     1|
+|25    |RAMB36E1_5  |     1|
+|26    |RAMB36E1_6  |     1|
+|27    |RAMB36E1_7  |     1|
+|28    |RAMB36E1_8  |     1|
+|29    |RAMB36E1_9  |     1|
+|30    |FDCE        |   114|
+|31    |FDPE        |    22|
+|32    |FDRE        |   851|
+|33    |FDSE        |     8|
+|34    |LDC         |    16|
+|35    |IBUF        |    22|
+|36    |OBUF        |    32|
 +------+------------+------+
 
 Report Instance Areas: 
 +------+--------------------+---------------+------+
 |      |Instance            |Module         |Cells |
 +------+--------------------+---------------+------+
-|1     |top                 |               |  3002|
+|1     |top                 |               |  2993|
 |2     |  my_clock_div      |clock_div      |     8|
-|3     |  my_core           |core           |  2003|
-|4     |  my_mem_controller |mem_controller |   402|
+|3     |  my_core           |core           |  2017|
+|4     |  my_mem_controller |mem_controller |   396|
 |5     |    MEM             |mem_mod        |    10|
 |6     |    ROM             |game_rom       |    16|
-|7     |  my_time_keeper    |time_keeper    |   150|
-|8     |  my_vga_controller |vga_controller |   339|
+|7     |  my_time_keeper    |time_keeper    |   130|
+|8     |  my_vga_controller |vga_controller |   342|
 +------+--------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:01:25 . Memory (MB): peak = 715.563 ; gain = 506.117
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:35 . Memory (MB): peak = 729.973 ; gain = 520.961
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 275 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 715.563 ; gain = 207.359
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:01:26 . Memory (MB): peak = 715.563 ; gain = 506.117
+Synthesis finished with 0 errors, 0 critical warnings and 257 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:01:09 . Memory (MB): peak = 729.973 ; gain = 225.301
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:01:36 . Memory (MB): peak = 729.973 ; gain = 520.961
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 213 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -987,8 +987,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 64 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-339 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+340 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:01:24 . Memory (MB): peak = 715.563 ; gain = 500.430
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 715.563 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 30 18:26:01 2017...
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:33 . Memory (MB): peak = 729.973 ; gain = 515.230
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 729.973 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May 01 15:47:52 2017...
