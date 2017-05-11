@@ -1,3 +1,7 @@
+-- Adapted from Albert Fazakas who adapted from Alec Wyen and Mihaita Nagy
+-- VGA controller sample demo
+-- Copyright 2014 Digilent, Inc.
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
